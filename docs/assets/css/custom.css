@@ -1,0 +1,108 @@
+/* Ergodic Archive — custom styles */
+
+/* Wider content on large screens */
+.md-grid {
+  max-width: 1200px;
+}
+
+/* Glossary table: tighter, easier to scan */
+.glossary-table td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+  min-width: 220px;
+}
+
+/* Definition blockquote styling — used at the top of every deep-dive */
+blockquote {
+  border-left: 4px solid var(--md-primary-fg-color);
+  background: var(--md-code-bg-color);
+  padding: 0.8em 1.2em;
+  border-radius: 4px;
+  font-style: normal;
+}
+
+blockquote strong {
+  color: var(--md-primary-fg-color);
+}
+
+/* ── Text-to-Speech floating bar ─────────────────────────────────────────── */
+
+#tts-bar {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  z-index: 999;
+  background: var(--md-primary-fg-color);
+  border-radius: 2rem;
+  padding: 0.35rem 0.75rem 0.35rem 0.6rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  transition: opacity 0.2s ease;
+}
+
+#tts-bar:hover {
+  opacity: 1 !important;
+}
+
+#tts-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--md-primary-bg-color);
+  font-size: 1rem;
+  padding: 0.15rem 0.25rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  transition: background 0.15s ease;
+}
+
+#tts-bar button:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+#tts-label {
+  color: var(--md-primary-bg-color);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0 0.2rem;
+  user-select: none;
+}
+
+#tts-stop {
+  font-size: 0.8rem !important;
+}
+
+#tts-speed {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 0.8rem;
+  color: var(--md-primary-bg-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.3rem;
+  cursor: pointer;
+  outline: none;
+}
+
+#tts-speed option {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+/* Admonition tweaks */
+.admonition.simulation {
+  border-color: #00b4d8;
+}
+.admonition.simulation > .admonition-title {
+  background-color: rgba(0, 180, 216, 0.1);
+}
+.admonition.simulation > .admonition-title::before {
+  background-color: #00b4d8;
+  -webkit-mask-image: var(--md-admonition-icon--note);
+  mask-image: var(--md-admonition-icon--note);
+}

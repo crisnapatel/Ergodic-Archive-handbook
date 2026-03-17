@@ -1,0 +1,108 @@
+site_name: Ergodic Archive
+site_description: A conversational glossary for atomic-scale simulation — MD, DFT, Monte Carlo.
+site_author: Krishna
+site_url: https://crisnapatel.github.io/Ergodic-Archive-handbook/
+
+repo_url: https://github.com/crisnapatel/Ergodic-Archive-handbook
+repo_name: Ergodic-Archive-handbook
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.tooltips
+    - toc.follow
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - footnotes
+  - toc:
+      permalink: true
+  - def_list
+
+extra_javascript:
+  - assets/js/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - assets/js/tts.js
+
+extra_css:
+  - assets/css/custom.css
+
+nav:
+  - Home: index.md
+  - Glossary: glossary.md
+  - Terms:
+    - MD Fundamentals:
+      - Ergodicity: terms/ergodicity.md
+      - Ensembles (NVE · NVT · NPT): terms/ensembles.md
+      - Periodic Boundary Conditions: terms/pbc.md
+      - Minimum Image Convention: terms/mic.md
+      - Cutoff Radius & Neighbor Lists: terms/cutoff-radius.md
+      - Thermostats & Barostats: terms/thermostats.md
+      - Velocity Verlet Integrator: terms/verlet.md
+      - Force Fields & Interatomic Potentials: terms/force-fields.md
+      - Thermalization & Equilibration: terms/equilibration.md
+    - Analysis & Observables:
+      - Radial Distribution Function: terms/rdf.md
+      - Mean Squared Displacement: terms/msd.md
+      - Finite Size Effects: terms/finite-size-effects.md
+    - DFT Fundamentals:
+      - Born-Oppenheimer Approximation: terms/born-oppenheimer.md
+      - Electron Density: terms/electron-density.md
+      - Functional: terms/functional.md
+      - Kohn-Sham Equations & SCF: terms/kohn-sham-scf.md
+      - Kohn-Sham Effective Potential: terms/vks-effective-potential.md
+      - Kohn-Sham Orbitals: terms/kohn-sham-orbitals.md
+      - Exchange-Correlation Functional: terms/xc-functional.md
+      - Pseudopotentials & PAW: terms/pseudopotentials.md
+      - Basis Sets: terms/basis-sets.md
+      - Reciprocal Lattice: terms/reciprocal-lattice.md
+      - Brillouin Zone & k-points: terms/kpoints.md
+      - Wavevector k (Crystal Momentum): terms/wavevector-k.md
+      - Convergence Testing: terms/convergence.md
+    - Sampling & Enhanced Sampling:
+      - Free Energy & Rare Events: terms/free-energy.md
+    - Numerical Methods & Stability:
+      - Nyquist Criterion & Timestep: terms/nyquist.md
+      - Energy Minimization: terms/energy-minimization.md
+      - Ewald Summation & PME: terms/ewald.md
+      - Equipartition Theorem: terms/equipartition.md
